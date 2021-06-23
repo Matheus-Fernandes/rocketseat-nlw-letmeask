@@ -1,14 +1,17 @@
+import { useState, FormEvent } from 'react';
 import { useHistory } from 'react-router';
 
-import illustrationImg from '../assets/images/illustration.svg'
-import logoImg from '../assets/images/logo.svg'
-import googleIconImg from '../assets/images/google-icon.svg'
+import illustrationImg from '../assets/images/illustration.svg';
+import logoImg from '../assets/images/logo.svg';
+import googleIconImg from '../assets/images/google-icon.svg';
 import { Button } from '../components/Button';
 
 import '../styles/auth.scss';
 import { useAuth } from './../hooks/useAuth';
+import { database } from '../services/firebase';
 
 export function Home() {
+    const [roomCode, setRoomCode] = useState('');
     const history = useHistory();
     const { signInWithGoogle, user } = useAuth()
 
@@ -18,6 +21,23 @@ export function Home() {
         }
 
         history.push('/rooms/new')
+    }
+
+    async function handleJoinRoom(event: FormEvent) {
+        event.preventDefault();
+
+        if (roomCode.trim() === '') {
+            return;
+        }
+
+        const roomRef = await database.ref(`rooms/${roomCode}`).get()
+
+        if (!roomRef.exists()) {
+            alert("Room does not exist.");
+            return;
+        }
+
+        history.push(`/rooms/${roomCode}`)
     }
 
     return (
@@ -35,9 +55,11 @@ export function Home() {
                         Crie a sua sala com o Google
                     </button>
                     <div className="separator">ou entre em uma sala</div>
-                    <form>
+                    <form onSubmit={event => handleJoinRoom(event)}>
                         <input type="text"
-                            placeholder="Digite o código da sala" />
+                            placeholder="Digite o código da sala"
+                            onChange={event => setRoomCode(event.target.value)}
+                            value={roomCode} />
                         <Button type="submit">
                             Entra na sala
                         </Button>
