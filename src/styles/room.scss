@@ -13,6 +13,15 @@
             > img {
                 max-height: 45px;
             }
+
+            > div {
+                display:flex;
+                gap: 16px;
+                
+                button {
+                    height: 40px;
+                }
+            }
         }
     }
 
@@ -39,7 +48,7 @@
                 color: #FFF;
                 font-weight: 500;
                 font-size: 14px;
-                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.42);
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
             }
         }
 
@@ -50,7 +59,7 @@
                 padding: 16px;
                 border-radius: 8px;
                 background: #fefefe;
-                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.84);
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
                 resize: vertical;
                 min-height: 130px;
             }
@@ -69,9 +78,7 @@
                         width: 32px;
                         height: 32px;
                         border-radius: 50%;
-                        border: #29292e 2px solid;
-                        border-width: 2px;
-                        border-color: #29292e77;
+                        border: #29292e 2px solid;                        
                     }
 
                     > span {
@@ -100,6 +107,10 @@
                 }
 
             }
+        }
+
+        .question-list {
+            margin-top:32px;
         }
     }
 }
