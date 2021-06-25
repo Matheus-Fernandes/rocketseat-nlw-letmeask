@@ -26,8 +26,9 @@
     }
 
     main {
-        max-width: 800px;
+        max-width: 880px;
         margin: 0 auto;
+        padding: 0 40px;
 
         .room-title{
             margin: 32px 0 24px;
@@ -44,7 +45,7 @@
                 margin-left: 16px;
                 background: #e559f9;
                 border-radius: 9999px;
-                padding: 8px 16px;
+                padding: 8px 13px;
                 color: #FFF;
                 font-weight: 500;
                 font-size: 14px;
@@ -94,6 +95,7 @@
                     font-size: 14px;
                     color: #737380;
                     font-weight: 500;
+                    
 
                     button {
                         background: transparent;
@@ -111,6 +113,44 @@
 
         .question-list {
             margin-top:32px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #page-room{
+        header{
+            .content{
+                display: block;
+
+                > img {
+                    display: none;
+                }
+
+                > div {
+                    display:flex;
+                    flex-direction: column;
+                }
+            }
+        }  
+        main{
+            form {
+                .form-footer{
+                    flex-direction: column;
+                    gap: 16px;
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }  
+            .room-title{
+                span{
+                    .labelQtdPerguntas {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

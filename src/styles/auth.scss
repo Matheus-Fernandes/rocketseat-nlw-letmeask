@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 120px 80px;
+        padding: 80px 40px;
     }
 
     img {
@@ -36,6 +36,7 @@
         display:flex;
         align-items: center;
         justify-content: center;
+        padding: 80px 40px;
     }    
 
     .main-content {
@@ -139,5 +140,21 @@
     }
 }
 
+@media (max-width: 800px) {
+    #page-auth{
+      flex-direction: column;
 
+      aside {
+        background-image: url('../assets/images/illustration.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
+        img {
+            display: none;
+        }
+      }
+
+    }
+}
+  

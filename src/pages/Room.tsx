@@ -65,14 +65,21 @@ export function Room() {
             <header>
                 <div className="content">
                     <img src={logoImg} alt="Letmeask" />
-                    <RoomCode code={roomId} />
+                    <div>
+                        <RoomCode code={roomId} />
+                    </div>
                 </div>
             </header>
 
             <main>
                 <div className={"room-title"}>
                     <h1>Sala {title}</h1>
-                    {questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
+                    {questions.length > 0 && (
+                        <span>
+                            {questions.length}
+                            <label className="labelQtdPerguntas"> pergunta(s)</label>
+                        </span>
+                    )}
                 </div>
 
                 <form onSubmit={handleSendQuestion}>
