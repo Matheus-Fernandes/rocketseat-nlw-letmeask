@@ -50,7 +50,27 @@ export function useRoom(roomId: string) {
                     likeCount: (Object.values(value.likes ?? {})).length,
                     likeId: Object.entries(value.likes ?? {}).find(([key, like]) => like.authorId === user?.id)?.[0]
                 }
-            })
+            }).sort(
+                (q1, q2) => {
+                    const q1Firt = -1;
+                    const q2Fist = 1;
+
+                    if (q1.isAnswered) {
+                        return q2Fist
+                    }
+                    if (q2.isAnswered) {
+                        return q1Firt
+                    }
+                    if (q1.isHighlighted) {
+                        return q1Firt
+                    }
+                    if (q2.isHighlighted) {
+                        return q2Fist
+                    }
+
+                    return q2.likeCount - q1.likeCount;
+                }
+            )
 
             setQuestions(parsedQuestions)
             setTitle(databaseRoom.title)
