@@ -1,13 +1,20 @@
-import copyImg from '../assets/images/copy.svg';
+import copyImg from '../assets/images/share.svg';
 import '../styles/room-code.scss';
 
 type RoomCodeProps = {
+    name: string
     code: string
 }
 
 export function RoomCode(props: RoomCodeProps) {
-    function copyRoomCodeToCLipboard() {
-        navigator.clipboard.writeText(props.code)
+    async function copyRoomCodeToCLipboard() {
+        const shareData = {
+            title: `Letmeask (Sala ${props.name})`,
+            text: 'Entre para o letmeask e faça perguntas ao vivo!',
+            url: `/rooms/${props.code}`,
+        }
+
+        await navigator.share(shareData);
     }
 
     return (
