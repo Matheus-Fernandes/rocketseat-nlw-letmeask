@@ -71,6 +71,7 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 16px;
+               
 
                 .user-info {
                     display: flex;
@@ -96,7 +97,7 @@
                     font-size: 14px;
                     color: #737380;
                     font-weight: 500;
-                    
+                    white-space: nowrap;
 
                     button {
                         background: transparent;
@@ -146,7 +147,7 @@
 
                     .user-info {
                         span{
-                           max-width: 120px;
+                           max-width: 100px;
                         }
                     }
                 }
@@ -161,3 +162,13 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .form-footer {
+
+        button{
+            display: inline;
+        }
+    }
+}
+  

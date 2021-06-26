@@ -82,7 +82,9 @@ export function AdminRoom() {
                                 author={question.author}
                                 isAnswered={question.isAnswered}
                                 isHighlighted={question.isHighlighted}
+                                footerClassName={"admin-footer"}
                             >
+                                {question.likeCount > 0 && (<span className="likeSpan">{question.likeCount} like(s)</span>)}
                                 {!question.isAnswered && (
                                     <>
                                         <button
@@ -106,6 +108,7 @@ export function AdminRoom() {
                                 >
                                     <img src={deleteImg} alt="Remover pergunta" />
                                 </button>
+
                             </Question>
                         );
                     })}

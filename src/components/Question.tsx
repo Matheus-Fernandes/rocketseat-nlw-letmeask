@@ -11,6 +11,7 @@ type QuestionProps = {
     children?: ReactNode,
     isAnswered?: boolean;
     isHighlighted?: boolean;
+    footerClassName?: string
 }
 
 export function Question({
@@ -18,7 +19,8 @@ export function Question({
     author,
     isAnswered = false,
     isHighlighted = false,
-    children
+    children,
+    footerClassName = ""
 }: QuestionProps) {
     return (
         <div className={cx({
@@ -26,8 +28,10 @@ export function Question({
             answered: isAnswered,
             highlighted: isHighlighted && !isAnswered
         })}>
-            <p>{content}</p>
-            <footer>
+            <div>
+                <p>{content}</p>
+            </div>
+            <footer className={footerClassName}>
                 <div className="user-info">
                     <img src={author.avatar} alt={author.name} />
                     <span>{author.name}</span>
