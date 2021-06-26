@@ -54,9 +54,9 @@ export function Home() {
             </aside>
             <main>
                 <div className="main-content">
-                    <img src={logoImg} alt="Letmeask" />
+                    <img src={logoImg} alt="Letmeask" width="157px" height="75px" />
                     <button className="create-room" onClick={handleCreateRoom}>
-                        <img src={googleIconImg} alt="Logo do Google" />
+                        <img src={googleIconImg} alt="Logo do Google" width="24px" height="24px" />
                         Crie a sua sala com o Google
                     </button>
                     <div className="separator">ou entre em uma sala</div>
