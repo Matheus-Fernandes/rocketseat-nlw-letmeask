@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+![apple-touch-icon](https://user-images.githubusercontent.com/15361728/123521347-7dd7eb00-d68c-11eb-9ea9-50fd0b04ecae.png) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Letmeask Matheus
 
-## Available Scripts
+## PWA que gerencia salas de Q&A para tirar dúvidas da audiência em tempo real.
 
-In the project directory, you can run:
+### Sobre
+Aplicação desenvolvida durantes o NLW Together da Rocketseat. Consiste em um gerenciador de perguntas e respostas PWA (Progressive Web App) feito em ReactJS.
 
-### `yarn start`
+### Features
+- [x] Criação de salas
+- [x] Compartilhamento de salas via link
+- [x] Criação e visualização de perguntas
+- [x] Dar Likes
+- [x] Perguntas mais votadas
+- [x] Destacar/Responder pergunta
+- [x] ...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Print
+![image](https://user-images.githubusercontent.com/15361728/123522056-40c22780-d691-11eb-8c6c-392be23e119b.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Preview
+https://letmeask-matheus.web.app/
 
-### `yarn test`
+### Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/), [Firebase CLI](https://firebase.google.com/docs/cli). Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-### `yarn build`
+### Firebase (banco de dados)
+Em sua conta Firebase crie um projeto e adicione o banco de dados "Realtime Database" após isso configure seu projeto React. (https://firebase.google.com/docs)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Iniciando o projeto local
+$ yarn start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Construindo o projeto
+$ yarn build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Fazendo deploy
+$ firebase deploy
