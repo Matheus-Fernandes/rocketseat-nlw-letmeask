@@ -10,7 +10,7 @@ export function RoomCode(props: RoomCodeProps) {
     async function copyRoomCodeToCLipboard() {
         const shareData = {
             title: `Letmeask (Sala ${props.name})`,
-            text: 'Entre para o letmeask e faça perguntas ao vivo!',
+            text: `Entre para a sala ${props.name}: \n`,
             url: `/rooms/${props.code}`,
         }
 
