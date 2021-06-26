@@ -74,7 +74,12 @@ export function AdminRoom() {
                 </div>
 
                 <div className="question-list">
-                    {questions.map(question => {
+                    {questions.length == 0 && (
+                        <h3>
+                            No momento, não há perguntas nessa sala...
+                        </h3>
+                    )}
+                    {questions.length > 0 && questions.map(question => {
                         return (
                             <Question
                                 key={question.id}
