@@ -5,7 +5,7 @@
 ## PWA que gerencia salas de Q&A para tirar dúvidas da audiência em tempo real.
 
 ### Sobre
-Aplicação desenvolvida durantes o NLW Together da Rocketseat. Consiste em um gerenciador de perguntas e respostas PWA (Progressive Web App) feito em ReactJS.
+Aplicação desenvolvida durante o NLW Together da Rocketseat. Consiste em um gerenciador de perguntas e respostas PWA (Progressive Web App) feito em ReactJS.
 
 ### Features
 - [x] Criação de salas
